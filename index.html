@@ -1,122 +1,464 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kevin Naveros | CV & Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Naveros | CV</title>
+  <meta name="description" content="CV de Kevin Anthony Naveros Ayquipa — Economía PUCP. Retail & Commercial (Adidas), Analista Funcional Junior (Danysoft). Excel, Power BI, SQL, SAP, Python." />
 
-<style>
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  margin:0;
-  background:#f4f6f8;
-  color:#1f2933;
-}
-.container{
-  max-width:1000px;
-  margin:auto;
-  background:white;
-  padding:40px;
-}
-h1{font-size:36px;margin-bottom:5px;}
-h2{border-bottom:2px solid #2563eb;padding-bottom:6px;margin-top:40px;}
-.subtitle{color:#4b5563;margin-bottom:25px;}
-.section{margin-top:30px;}
-.job{margin-bottom:20px;}
-.job-title{font-weight:bold;}
-.date{color:#6b7280;font-size:14px;}
-ul{margin-top:8px;}
-.skills span{
-  display:inline-block;
-  background:#e5e7eb;
-  padding:6px 10px;
-  margin:5px;
-  border-radius:6px;
-  font-size:14px;
-}
-.footer{
-  margin-top:40px;
-  text-align:center;
-  color:#6b7280;
-  font-size:14px;
-}
-</style>
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f172a;
+      --panel2: rgba(15,23,42,.72);
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line: rgba(148,163,184,.16);
+      --brand:#60a5fa;
+      --brand2:#34d399;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 650px at 15% 10%, rgba(96,165,250,.18), transparent 60%),
+        radial-gradient(900px 650px at 85% 20%, rgba(52,211,153,.12), transparent 55%),
+        radial-gradient(1000px 750px at 50% 95%, rgba(96,165,250,.10), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .layout{
+      display:grid;
+      grid-template-columns: 290px 1fr;
+      min-height:100vh;
+    }
+
+    /* Sidebar */
+    .sidebar{
+      position:sticky; top:0; height:100vh;
+      padding:22px 16px;
+      border-right:1px solid var(--line);
+      background: rgba(2,6,23,.35);
+      backdrop-filter: blur(10px);
+    }
+    .profile{
+      background: var(--panel2);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .avatar{
+      width:100%;
+      aspect-ratio: 1/1;
+      border-radius: 18px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#111827;
+    }
+    .avatar img{
+      width:100%; height:100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display:block;
+    }
+    .name{margin:14px 0 4px; font-size:18px; font-weight:800; letter-spacing:.2px}
+    .role{margin:0; color:var(--muted); font-size:13px}
+    .social{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .iconbtn{
+      width:40px; height:40px;
+      display:grid; place-items:center;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(2,6,23,.25);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .iconbtn:hover{transform:translateY(-1px); border-color: rgba(96,165,250,.55)}
+    nav{
+      margin-top:14px;
+      background: var(--panel2);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+    }
+    .navlink{
+      display:flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      font-size:14px;
+    }
+    .navlink:first-child{border-top:none}
+    .navlink i{color: rgba(96,165,250,.9)}
+    .navlink:hover{color:var(--text); background: rgba(96,165,250,.07)}
+    .small{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:12px;
+      padding:0 2px;
+    }
+
+    /* Main */
+    .main{
+      padding:26px 18px 56px;
+    }
+    .wrap{max-width:var(--max); margin:0 auto}
+    .hero{
+      position:relative;
+      border-radius: 26px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(120deg, rgba(96,165,250,.22), rgba(52,211,153,.10)),
+        radial-gradient(900px 500px at 20% 20%, rgba(96,165,250,.25), transparent 60%),
+        radial-gradient(900px 500px at 80% 30%, rgba(52,211,153,.15), transparent 55%),
+        rgba(15,23,42,.55);
+      padding:34px 26px;
+    }
+    .hero h1{
+      margin:0;
+      font-size:40px;
+      line-height:1.1;
+      letter-spacing:-.02em;
+    }
+    .hero p{
+      margin:10px 0 0;
+      color:var(--muted);
+      max-width: 72ch;
+      font-size:15px;
+    }
+    .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(2,6,23,.25);
+      color:var(--text);
+      padding:7px 10px;
+      border-radius: 999px;
+      font-size:13px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    .card{
+      background: rgba(15,23,42,.62);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:20px;
+    }
+    .card h2{
+      margin:0 0 12px;
+      font-size:14px;
+      letter-spacing:.10em;
+      text-transform: uppercase;
+      color:var(--muted);
+    }
+    .item{padding:14px 0; border-top:1px solid var(--line)}
+    .item:first-of-type{border-top:none; padding-top:0}
+    .item h3{margin:0; font-size:16px}
+    .meta{margin:6px 0 0; color:var(--muted); font-size:13px}
+    ul{margin:10px 0 0; padding-left:18px}
+    li{margin:6px 0}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{font-size:12px; color:var(--muted); border:1px solid var(--line); padding:6px 8px; border-radius:999px; background: rgba(2,6,23,.18)}
+    .contactgrid{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .contactbox{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding:12px;
+      background: rgba(2,6,23,.22);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .contactbox b{color:var(--text)}
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+      opacity:.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .layout{grid-template-columns: 1fr}
+      .sidebar{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line)}
+      .grid{grid-template-columns: 1fr}
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="layout">
 
-<h1>Kevin Anthony Naveros Ayquipa</h1>
-<p class="subtitle">Economía – PUCP | Data, Finanzas & Retail Analytics</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/profile.jpg" alt="Foto de perfil">
+        </div>
+        <div class="name">Kevin Anthony Naveros Ayquipa</div>
+        <p class="role">Economía – PUCP · Retail & Commercial · Data/Analytics</p>
 
-<div class="section">
-<h2>Perfil Profesional</h2>
-<p>
-Profesional analítico, creativo y orientado a resultados, con experiencia en análisis funcional,
-finanzas corporativas, atención al cliente y mejora de procesos. Manejo de Excel, Power BI, SQL,
-SAP y Python, con enfoque en eficiencia operativa y toma de decisiones basada en datos.
-</p>
-</div>
+        <div class="social" aria-label="Redes">
+          <!-- Reemplaza los # por tus links reales cuando quieras -->
+          <a class="iconbtn" href="#" title="LinkedIn" onclick="alert('Luego pega aquí tu link de LinkedIn'); return false;">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a class="iconbtn" href="https://github.com/Naveros043011" target="_blank" rel="noopener" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a class="iconbtn" href="#" title="Email" onclick="location.href='mailto:tuemail@dominio.com'; return false;">
+            <i class="bi bi-envelope"></i>
+          </a>
+        </div>
+      </div>
 
-<div class="section">
-<h2>Logro Destacado</h2>
-<p>
-Becario PUCP Summer School 2026 (Q-LAB & Fin-LAB) en Ciencia de Datos aplicada a Macro-Finanzas.
-</p>
-</div>
+      <nav>
+        <a class="navlink" href="#home"><i class="bi bi-house"></i> Home</a>
+        <a class="navlink" href="#about"><i class="bi bi-person"></i> About</a>
+        <a class="navlink" href="#resume"><i class="bi bi-file-earmark-text"></i> Resume</a>
+        <a class="navlink" href="#skills"><i class="bi bi-lightning-charge"></i> Skills</a>
+        <a class="navlink" href="#projects"><i class="bi bi-kanban"></i> Projects</a>
+        <a class="navlink" href="#contact"><i class="bi bi-send"></i> Contact</a>
+      </nav>
 
-<div class="section">
-<h2>Experiencia Profesional</h2>
+      <div class="small">© <span id="y"></span> · GitHub Pages</div>
+    </aside>
 
-<div class="job">
-<p class="job-title">Adidas Group — Internship Program (Retail & Commercial Area)</p>
-<p class="date">Enero 2025 – Actualidad</p>
-<ul>
-<li>Análisis de ventas y KPIs comerciales.</li>
-<li>Atención al cliente y experiencia personalizada.</li>
-<li>Gestión operativa del punto de venta.</li>
-<li>Control de inventarios y reportes.</li>
-</ul>
-</div>
+    <!-- MAIN -->
+    <main class="main">
+      <div class="wrap">
 
-<div class="job">
-<p class="job-title">Danysoft E.I.R.L — Analista Funcional Junior</p>
-<p class="date">Enero 2024 – Diciembre 2024</p>
-<ul>
-<li>Facturación y documentación funcional.</li>
-<li>Toma de requerimientos y mejora de procesos.</li>
-<li>Análisis con Excel, Power BI y SQL.</li>
-</ul>
-</div>
+        <!-- HOME -->
+        <section id="home" class="hero">
+          <h1>Kevin Naveros</h1>
+          <p>
+            Estudiante de Economía (PUCP) con experiencia en análisis funcional, análisis financiero y finanzas corporativas,
+            además de atención al cliente y operación retail. Manejo Excel, Power BI, SQL y SAP, con enfoque en eficiencia y decisiones basadas en datos.
+          </p>
+          <div class="pills">
+            <span class="pill">📍 Lima, Perú</span>
+            <span class="pill">📊 KPIs & Reportes</span>
+            <span class="pill">⚙️ Procesos & Documentación</span>
+            <span class="pill">🧠 Data (en progreso)</span>
+          </div>
+        </section>
 
-</div>
+        <div class="grid">
+          <!-- ABOUT -->
+          <section id="about" class="card">
+            <h2>About</h2>
+            <div class="item">
+              <h3>Perfil Profesional</h3>
+              <p class="meta">
+                Profesional analítico, creativo, proactivo y orientado a resultados, con alta capacidad de adaptación y organización.
+                Experiencia en análisis funcional, análisis financiero y finanzas corporativas, así como en ventas, procesos y gestión documental.
+              </p>
+            </div>
 
-<div class="section">
-<h2>Educación</h2>
-<p><b>Pontificia Universidad Católica del Perú</b> — Economía (8.º ciclo)</p>
-<p><b>IDAT</b> — Especialización en Microsoft Excel</p>
-</div>
+            <div class="item">
+              <h3>Logro destacado</h3>
+              <p class="meta">
+                Becario con beca completa para la Summer School 2026 PUCP (Q-LAB & Fin-LAB): Ciencia de Datos aplicada a Macro-Finanzas,
+                con formación en Python para finanzas, ML/DL en series de tiempo, NLP financiero y Asset Pricing.
+              </p>
+            </div>
+          </section>
 
-<div class="section">
-<h2>Herramientas Técnicas</h2>
-<div class="skills">
-<span>Excel Avanzado</span>
-<span>Power BI</span>
-<span>SQL</span>
-<span>SAP</span>
-<span>Python</span>
-</div>
-</div>
+          <!-- RESUME (SUMMARY) -->
+          <section class="card">
+            <h2>Quick Summary</h2>
+            <div class="item">
+              <h3>Enfoque</h3>
+              <p class="meta">Retail & Comercial · Datos · Reportes · Mejora de procesos</p>
+              <div class="tags">
+                <span class="tag">Excel</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">SQL</span>
+                <span class="tag">SAP</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+            <div class="item">
+              <h3>Educación</h3>
+              <p class="meta">PUCP — Economía (8vo ciclo) · IDAT — Especialización en Microsoft Excel</p>
+            </div>
+          </section>
+        </div>
 
-<div class="section">
-<h2>Idiomas</h2>
-<p>Inglés — Intermedio (PUCP)</p>
-</div>
+        <!-- RESUME -->
+        <section id="resume" class="card" style="margin-top:18px">
+          <h2>Resume</h2>
 
-<div class="footer">
-© 2026 · Kevin Naveros · GitHub Pages
-</div>
+          <div class="item">
+            <h3>Adidas Group — Internship Program (Retail & Commercial Area)</h3>
+            <p class="meta">Enero 2025 – Actualidad</p>
+            <ul>
+              <li>Análisis del desempeño de ventas y KPIs (ventas, ticket promedio, conversión).</li>
+              <li>Atención al cliente con enfoque en experiencia personalizada y fidelización.</li>
+              <li>Gestión operativa: caja, facturación, devoluciones y soporte en campañas comerciales.</li>
+              <li>Control de inventarios, reposición, seguimiento de stock y reporte de quiebres.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SAP</span>
+              <span class="tag">Excel</span>
+              <span class="tag">KPIs</span>
+              <span class="tag">Retail Ops</span>
+            </div>
+          </div>
 
-</div>
+          <div class="item">
+            <h3>DANYSOFT E.I.R.L — Analista Funcional Junior</h3>
+            <p class="meta">Enero 2024 – Diciembre 2024</p>
+            <ul>
+              <li>Emisión de facturas, abonos y notas de crédito.</li>
+              <li>Elaboración de documentación funcional y toma de requerimientos.</li>
+              <li>Análisis y mejora de procesos; automatización con Excel/Power BI/SQL.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Excel</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Procesos</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Marathon Sports — Asesor de Ventas & Operaciones</h3>
+            <p class="meta">Marzo 2019 – Noviembre 2021</p>
+            <ul>
+              <li>Procesos de pago y manejo de sistemas de cobro.</li>
+              <li>Promoción y venta de productos; reposición e inventarios.</li>
+              <li>Visual merchandising según estándares.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SAP</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Retail</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Grupo Pionier — Ventas & Operaciones</h3>
+            <p class="meta">Febrero 2017 – Agosto 2017</p>
+            <ul>
+              <li>Asesoría al cliente y control/registro de inventarios.</li>
+              <li>Organización y clasificación de mercadería.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SAP S/4HANA</span>
+              <span class="tag">Excel</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Inversiones Rubin’s S.A.C — Operario de Almacén</h3>
+            <p class="meta">Diciembre 2016 – Febrero 2017</p>
+            <ul>
+              <li>Conteos físicos, inventarios, preparación de pedidos y empaques.</li>
+              <li>Clasificación y organización de productos.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SAP S/4HANA</span>
+              <span class="tag">Excel</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="card" style="margin-top:18px">
+          <h2>Skills</h2>
+
+          <div class="item">
+            <h3>Herramientas técnicas</h3>
+            <div class="tags">
+              <span class="tag">Excel (avanzado: macros, tablas dinámicas)</span>
+              <span class="tag">Power BI (intermedio: ETL, dashboards)</span>
+              <span class="tag">SQL (intermedio: consultas, joins)</span>
+              <span class="tag">SAP (FI, S/4HANA)</span>
+              <span class="tag">Python (básico)</span>
+              <span class="tag">Gestión de procesos & documentación funcional</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Idiomas</h3>
+            <p class="meta">Inglés — Intermedio (Centro de Idiomas PUCP – Intermedio 4)</p>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="card" style="margin-top:18px">
+          <h2>Projects</h2>
+
+          <div class="item">
+            <h3>Q-LAB & Fin-LAB (Summer School 2026) — Macro-Finance Data Science</h3>
+            <p class="meta">
+              Formación en Python para finanzas, ML/DL para series de tiempo, NLP financiero y Asset Pricing.
+              (Aquí luego puedes añadir links a notebooks o repos).
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Time Series</span>
+              <span class="tag">NLP</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Proyecto (pendiente)</h3>
+            <p class="meta">
+              Cuando tengas tu repo, aquí se pone: objetivo, herramientas y link a GitHub.
+            </p>
+            <div class="tags">
+              <span class="tag">Tu repo: (link)</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="card" style="margin-top:18px">
+          <h2>Contact</h2>
+          <div class="contactgrid">
+            <div class="contactbox"><b>Email</b><br><span>tuemail@dominio.com</span></div>
+            <div class="contactbox"><b>GitHub</b><br><span>github.com/Naveros043011</span></div>
+          </div>
+          <div class="item">
+            <h3>Referencias</h3>
+            <p class="meta">Disponibles bajo petición.</p>
+          </div>
+        </section>
+
+        <div class="footer">
+          © <span id="y2"></span> Kevin Naveros · Hecho con GitHub Pages
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    const y = new Date().getFullYear();
+    document.getElementById("y").textContent = y;
+    document.getElementById("y2").textContent = y;
+  </script>
 </body>
 </html>
