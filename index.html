@@ -3,47 +3,41 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kevin Anthony Naveros Ayquipa | Portfolio</title>
+<title>Kevin Anthony Naveros Ayquipa | Economist & Data Analytics</title>
+
+<meta name="description" content="Economist at PUCP with experience in data analytics, financial analysis, retail operations and corporate processes. Excel, Power BI, SQL, SAP, Python."/>
+<meta name="author" content="Kevin Anthony Naveros Ayquipa"/>
 
 <style>
 :root{
---bg:#0b1020;--panel:#0f172a;--panel2:rgba(15,23,42,.7);
+--bg:#0b1020;--panel:#0f172a;--panel2:rgba(15,23,42,.75);
 --text:#e5e7eb;--muted:#94a3b8;--line:rgba(148,163,184,.18);
 --accent:#60a5fa;--r:18px;--max:1100px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto;
-background:var(--bg);color:var(--text);line-height:1.6}
-header{
-position:sticky;top:0;z-index:50;
-background:#020617cc;border-bottom:1px solid var(--line);
-backdrop-filter:blur(10px)}
-.nav{
-max-width:var(--max);margin:auto;
-display:flex;justify-content:space-between;
-padding:14px 18px}
-.menu a{
-margin-left:12px;color:var(--muted);
-text-decoration:none;font-size:13px}
+body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text);line-height:1.6}
+header{position:sticky;top:0;background:#020617cc;border-bottom:1px solid var(--line);backdrop-filter:blur(10px);z-index:50}
+.nav{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 18px}
+.menu a{margin-left:14px;color:var(--muted);text-decoration:none;font-size:13px}
 .menu a.active{color:#fff}
 .wrap{max-width:var(--max);margin:auto;padding:40px 18px}
 section{margin-top:70px}
-.card{
-background:var(--panel2);border:1px solid var(--line);
-border-radius:var(--r);padding:24px}
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
 h1{font-size:42px;margin:0}
 h2{font-size:13px;text-transform:uppercase;color:var(--muted)}
-.acc button{
-width:100%;background:none;border:none;
-color:#fff;padding:14px 0;text-align:left;
-border-top:1px solid var(--line);
-font-weight:600;cursor:pointer}
+.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-size:13px}
+.photo{width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.acc button{width:100%;background:none;border:none;color:#fff;padding:14px 0;text-align:left;border-top:1px solid var(--line);font-weight:600;cursor:pointer}
 .acc button:first-child{border-top:none}
 .acc .panel{display:none;padding:10px 0;color:var(--muted)}
 .acc button.active + .panel{display:block}
 ul{margin:8px 0 0 18px}
+.kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.kpi{border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px}
 footer{text-align:center;color:var(--muted);margin-top:40px;font-size:13px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}h1{font-size:34px}}
 </style>
 </head>
 
@@ -66,9 +60,20 @@ footer{text-align:center;color:var(--muted);margin-top:40px;font-size:13px}
 <main class="wrap">
 
 <section id="home">
-<div class="card">
+<div class="card hero">
+<div>
 <h1>Kevin Anthony Naveros Ayquipa</h1>
 <p>Economist | Data & Financial Analytics | Corporate & Retail Experience</p>
+<div class="kpis">
+<span class="kpi">Excel · Power BI · SQL</span>
+<span class="kpi">SAP · Python</span>
+<span class="kpi">Retail & Corporate</span>
+</div>
+<a class="btn" href="assets/CV_Kevin_Naveros.pdf" target="_blank">Download CV (PDF)</a>
+</div>
+<div class="photo">
+<img src="assets/profile.jpg" alt="Kevin Naveros profile photo">
+</div>
 </div>
 </section>
 
@@ -78,17 +83,12 @@ footer{text-align:center;color:var(--muted);margin-top:40px;font-size:13px}
 <div class="acc">
 <button class="active">Professional Profile</button>
 <div class="panel">
-Economics student at the Pontificia Universidad Católica del Perú (8th semester), with an analytical,
-organized and results-oriented profile. Experience in functional analysis, financial analysis,
-corporate finance, retail operations, sales, customer service, and process optimization.
-Strong command of Excel, Power BI, SQL, SAP and Python, with a focus on data-driven decision-making.
+Economics student at the Pontificia Universidad Católica del Perú (8th semester), with an analytical and results-oriented profile. Experience in financial analysis, data analytics, retail operations, sales, customer service and process optimization. Strong command of Excel, Power BI, SQL, SAP and Python for data-driven decision-making.
 </div>
 
 <button>Key Achievement</button>
 <div class="panel">
-Full scholarship recipient for the PUCP Summer School 2026 (Q-LAB & Fin-LAB), a highly competitive
-program in Data Science applied to Macro-Finance, including training in Python for finance,
-Machine Learning, Deep Learning for time series, financial NLP, and Asset Pricing.
+Full scholarship recipient for the PUCP Summer School 2026 (Q-LAB & Fin-LAB), a highly competitive program in Data Science applied to Macro-Finance: Python for finance, Machine Learning, Deep Learning for time series, financial NLP and Asset Pricing.
 </div>
 </div>
 </div>
@@ -99,17 +99,14 @@ Machine Learning, Deep Learning for time series, financial NLP, and Asset Pricin
 <h2>Professional Experience</h2>
 <div class="acc">
 
-<button class="active">Adidas Group — Internship Program (Retail & Commercial Area)</button>
+<button class="active">Adidas Group — Internship Program (Retail & Commercial)</button>
 <div class="panel">
 <ul>
-<li>Participation in the Internship Program in the Retail and Commercial Area.</li>
 <li>Sales performance analysis and monitoring of commercial KPIs.</li>
-<li>Customer service with a focus on personalized shopping experience and customer loyalty.</li>
-<li>Support in point-of-sale operations: cash register, invoicing, and returns.</li>
-<li>Inventory control, stock replenishment, and shortage reporting.</li>
-<li>Support in commercial campaigns, launches, and promotions.</li>
-<li>Coordination with the sales team to achieve individual and group targets.</li>
-<li>Registration and organization of operational information for internal reports.</li>
+<li>Customer service focused on personalized experience and loyalty.</li>
+<li>Point-of-sale operations: invoicing, returns and cash handling.</li>
+<li>Inventory control, replenishment and stock monitoring.</li>
+<li>Support in commercial campaigns and product launches.</li>
 <li><strong>Tools:</strong> SAP, Microsoft Excel.</li>
 </ul>
 </div>
@@ -117,37 +114,31 @@ Machine Learning, Deep Learning for time series, financial NLP, and Asset Pricin
 <button>Danysoft E.I.R.L — Junior Functional Analyst</button>
 <div class="panel">
 <ul>
-<li>Issuance of invoices, credit notes, and customer payments.</li>
-<li>Preparation of functional documentation.</li>
-<li>Requirements gathering with end users.</li>
 <li>Process analysis and continuous improvement.</li>
-<li>Automation and analysis using Excel, Power BI, and SQL.</li>
+<li>Functional documentation and requirements gathering.</li>
+<li>Automation and reporting with Excel, Power BI and SQL.</li>
 </ul>
 </div>
 
 <button>Marathon Sports — Sales & Operations Advisor</button>
 <div class="panel">
 <ul>
-<li>Cash handling and payment system operations.</li>
-<li>Product promotion and sales.</li>
-<li>Inventory management and stock replenishment.</li>
-<li>Visual merchandising following brand standards.</li>
+<li>Sales, inventory management and visual merchandising.</li>
+<li>POS systems and customer advisory.</li>
 </ul>
 </div>
 
 <button>Grupo Pionier — Sales & Operations</button>
 <div class="panel">
 <ul>
-<li>Customer advisory and sales support.</li>
-<li>Organization and inventory control.</li>
+<li>Customer advisory and stock organization.</li>
 </ul>
 </div>
 
 <button>Inversiones Rubin’s S.A.C — Warehouse Operator</button>
 <div class="panel">
 <ul>
-<li>Physical inventory counts.</li>
-<li>Classification, order preparation, and packaging.</li>
+<li>Physical inventory counts and order preparation.</li>
 </ul>
 </div>
 
@@ -169,10 +160,10 @@ Machine Learning, Deep Learning for time series, financial NLP, and Asset Pricin
 <div class="card">
 <h2>Certifications</h2>
 <ul>
-<li>Excel Specialist — IDAT (72 academic hours)</li>
-<li>Introduction to SQL — DataCamp (2026)</li>
-<li>Financial & Banking Econometrics — CIIP (50 hours)</li>
-<li>Statistics for Data Science — CIIP (50 hours)</li>
+<li><a href="assets/Excel_IDAT.pdf" target="_blank">Excel Specialist — IDAT (72 academic hours)</a></li>
+<li><a href="assets/SQL_DataCamp.pdf" target="_blank">Introduction to SQL — DataCamp</a></li>
+<li><a href="assets/Econometrics_CIIP.pdf" target="_blank">Financial & Banking Econometrics — CIIP (50 hours)</a></li>
+<li><a href="assets/Statistics_CIIP.pdf" target="_blank">Statistics for Data Science — CIIP (50 hours)</a></li>
 </ul>
 </div>
 </section>
