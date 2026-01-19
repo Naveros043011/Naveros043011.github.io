@@ -1,363 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tomy Naveros | CV & Portafolio</title>
-  <meta name="description" content="CV y portafolio de Tomy Naveros: Economía PUCP, Retail & Comercial (Adidas), análisis de datos (Excel, Power BI, SQL, Python)." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Naveros | CV & Portfolio</title>
 
-  <style>
-    :root{
-      --bg:#0b1020;
-      --card:#0f172a;
-      --muted:#94a3b8;
-      --text:#e2e8f0;
-      --line:rgba(148,163,184,.18);
-      --accent:#60a5fa;
-      --accent2:#34d399;
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 980px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1000px 700px at 10% 10%, rgba(96,165,250,.18), transparent 60%),
-        radial-gradient(900px 600px at 85% 15%, rgba(52,211,153,.12), transparent 55%),
-        radial-gradient(1000px 700px at 50% 90%, rgba(96,165,250,.10), transparent 55%),
-        var(--bg);
-      line-height:1.55;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 56px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 2px 22px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-    }
-    .logo{
-      width:40px;height:40px;border-radius:14px;
-      background: linear-gradient(135deg, rgba(96,165,250,.9), rgba(52,211,153,.9));
-      box-shadow: var(--shadow);
-    }
-    .brand h1{font-size:16px;margin:0;font-weight:700}
-    .brand p{margin:0;font-size:13px;color:var(--muted)}
-    .nav{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
-    .chip{
-      border:1px solid var(--line);
-      padding:8px 10px;
-      border-radius:999px;
-      font-size:13px;
-      color:var(--muted);
-      background: rgba(15,23,42,.55);
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    .chip:hover{transform:translateY(-1px);border-color:rgba(96,165,250,.5);color:var(--text)}
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:18px;
-      align-items:stretch;
-      margin-top:10px;
-    }
-    .card{
-      background: rgba(15,23,42,.62);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:22px;
-    }
-    .headline{
-      margin:0;
-      font-size:34px;
-      letter-spacing:-.02em;
-      line-height:1.15;
-    }
-    .sub{
-      margin:12px 0 0;
-      color:var(--muted);
-      font-size:15px;
-      max-width:60ch;
-    }
-    .badges{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:16px;
-    }
-    .badge{
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:7px 10px;
-      font-size:13px;
-      color:var(--text);
-      background: rgba(2,6,23,.25);
-    }
-    .cta{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top:18px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(2,6,23,.25);
-      color:var(--text);
-      font-size:14px;
-      font-weight:600;
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    .btn:hover{transform:translateY(-1px);border-color:rgba(96,165,250,.55)}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(96,165,250,.95), rgba(52,211,153,.80));
-      border-color: transparent;
-      color:#071018;
-    }
-    .btn.primary:hover{border-color: transparent}
-    .side{
-      display:flex; flex-direction:column; gap:14px;
-    }
-    .mini h3{margin:0 0 10px;font-size:14px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-    .mini p{margin:0;color:var(--text);font-size:14px}
-    .kv{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
-    .kv:first-of-type{border-top:none;padding-top:0}
-    .kv span{color:var(--muted);font-size:13px}
-    .kv b{font-size:13px;font-weight:700}
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-    }
-    .section h2{
-      margin:0 0 12px;
-      font-size:14px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--muted);
-    }
-    .item{
-      padding:14px 0;
-      border-top:1px solid var(--line);
-    }
-    .item:first-of-type{border-top:none;padding-top:0}
-    .item h3{margin:0;font-size:16px}
-    .meta{margin:6px 0 0;color:var(--muted);font-size:13px}
-    .bullets{margin:10px 0 0;padding-left:18px;color:var(--text)}
-    .bullets li{margin:6px 0}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 8px;border-radius:999px;background: rgba(2,6,23,.18)}
-    .footer{
-      margin-top:22px;
-      color:var(--muted);
-      font-size:13px;
-      text-align:center;
-      opacity:.9;
-    }
-    .divider{height:1px;background:var(--line);margin:18px 0}
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-      .headline{font-size:30px}
-    }
-  </style>
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  background:#f4f6f8;
+  color:#1f2933;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  background:white;
+  padding:40px;
+}
+h1{font-size:36px;margin-bottom:5px;}
+h2{border-bottom:2px solid #2563eb;padding-bottom:6px;margin-top:40px;}
+.subtitle{color:#4b5563;margin-bottom:25px;}
+.section{margin-top:30px;}
+.job{margin-bottom:20px;}
+.job-title{font-weight:bold;}
+.date{color:#6b7280;font-size:14px;}
+ul{margin-top:8px;}
+.skills span{
+  display:inline-block;
+  background:#e5e7eb;
+  padding:6px 10px;
+  margin:5px;
+  border-radius:6px;
+  font-size:14px;
+}
+.footer{
+  margin-top:40px;
+  text-align:center;
+  color:#6b7280;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="container">
 
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Tomy Naveros</h1>
-          <p>Economía – PUCP · Data & Analytics · Retail/Comercial (Adidas)</p>
-        </div>
-      </div>
+<h1>Kevin Anthony Naveros Ayquipa</h1>
+<p class="subtitle">Economía – PUCP | Data, Finanzas & Retail Analytics</p>
 
-      <div class="nav" aria-label="Navegación">
-        <a class="chip" href="#experiencia">Experiencia</a>
-        <a class="chip" href="#proyectos">Proyectos</a>
-        <a class="chip" href="#habilidades">Habilidades</a>
-        <a class="chip" href="#contacto">Contacto</a>
-      </div>
-    </div>
+<div class="section">
+<h2>Perfil Profesional</h2>
+<p>
+Profesional analítico, creativo y orientado a resultados, con experiencia en análisis funcional,
+finanzas corporativas, atención al cliente y mejora de procesos. Manejo de Excel, Power BI, SQL,
+SAP y Python, con enfoque en eficiencia operativa y toma de decisiones basada en datos.
+</p>
+</div>
 
-    <div class="hero">
-      <section class="card">
-        <h2 class="headline">CV & Portafolio</h2>
-        <p class="sub">
-          Soy estudiante de Economía en PUCP. Me enfoco en análisis de datos y mejora de decisiones con métricas,
-          dashboards y automatización (Excel, Power BI, SQL, Python). Actualmente en el área Retail y Comercial.
-        </p>
+<div class="section">
+<h2>Logro Destacado</h2>
+<p>
+Becario PUCP Summer School 2026 (Q-LAB & Fin-LAB) en Ciencia de Datos aplicada a Macro-Finanzas.
+</p>
+</div>
 
-        <div class="badges">
-          <span class="badge">📍 Lima, Perú</span>
-          <span class="badge">📊 KPIs & Reportes</span>
-          <span class="badge">🧠 Data Science (en progreso)</span>
-          <span class="badge">⚡ Power BI · SQL · Python</span>
-        </div>
+<div class="section">
+<h2>Experiencia Profesional</h2>
 
-        <div class="cta">
-          <!-- Reemplaza estos links cuando los tengas -->
-          <a class="btn primary" href="#contacto">Contactarme</a>
-          <a class="btn" href="https://github.com/Naveros043011" target="_blank" rel="noopener">GitHub</a>
-          <!-- Si no tienes LinkedIn aún, deja el botón igual o cámbialo luego -->
-          <a class="btn" href="#" onclick="alert('Luego reemplaza este link por tu LinkedIn'); return false;">LinkedIn</a>
-        </div>
+<div class="job">
+<p class="job-title">Adidas Group — Internship Program (Retail & Commercial Area)</p>
+<p class="date">Enero 2025 – Actualidad</p>
+<ul>
+<li>Análisis de ventas y KPIs comerciales.</li>
+<li>Atención al cliente y experiencia personalizada.</li>
+<li>Gestión operativa del punto de venta.</li>
+<li>Control de inventarios y reportes.</li>
+</ul>
+</div>
 
-        <div class="divider"></div>
-        <p class="sub" style="margin-top:0">
-          Tip: si quieres que esto sea “top”, agrega 2–3 proyectos con links a GitHub y resultados medibles.
-        </p>
-      </section>
+<div class="job">
+<p class="job-title">Danysoft E.I.R.L — Analista Funcional Junior</p>
+<p class="date">Enero 2024 – Diciembre 2024</p>
+<ul>
+<li>Facturación y documentación funcional.</li>
+<li>Toma de requerimientos y mejora de procesos.</li>
+<li>Análisis con Excel, Power BI y SQL.</li>
+</ul>
+</div>
 
-      <aside class="side">
-        <div class="card mini">
-          <h3>Resumen</h3>
+</div>
 
-          <div class="kv">
-            <span>Área actual</span>
-            <b>Retail & Comercial (Adidas)</b>
-          </div>
-          <div class="kv">
-            <span>Enfoque</span>
-            <b>Ventas, KPIs, análisis</b>
-          </div>
-          <div class="kv">
-            <span>Herramientas</span>
-            <b>Excel · Power BI · SQL · Python</b>
-          </div>
-          <div class="kv">
-            <span>Interés</span>
-            <b>Data analytics & finanzas</b>
-          </div>
-        </div>
+<div class="section">
+<h2>Educación</h2>
+<p><b>Pontificia Universidad Católica del Perú</b> — Economía (8.º ciclo)</p>
+<p><b>IDAT</b> — Especialización en Microsoft Excel</p>
+</div>
 
-        <div class="card mini" id="contacto">
-          <h3>Contacto</h3>
-          <p><b>Email:</b> <span style="color:var(--muted)">tucorreo@gmail.com</span></p>
-          <p style="margin-top:8px"><b>GitHub:</b> <span style="color:var(--muted)">github.com/Naveros043011</span></p>
-          <p style="margin-top:8px;color:var(--muted);font-size:13px">
-            (Luego cambia el correo por el tuyo real.)
-          </p>
-        </div>
-      </aside>
-    </div>
+<div class="section">
+<h2>Herramientas Técnicas</h2>
+<div class="skills">
+<span>Excel Avanzado</span>
+<span>Power BI</span>
+<span>SQL</span>
+<span>SAP</span>
+<span>Python</span>
+</div>
+</div>
 
-    <div class="grid">
-      <section class="card section" id="experiencia">
-        <h2>Experiencia</h2>
+<div class="section">
+<h2>Idiomas</h2>
+<p>Inglés — Intermedio (PUCP)</p>
+</div>
 
-        <div class="item">
-          <h3>Adidas · Retail y Comercial (Programa de prácticas)</h3>
-          <p class="meta">Lima · 2025–Actualidad (ajusta la fecha si corresponde)</p>
-          <ul class="bullets">
-            <li>Seguimiento de KPIs (ventas, conversión, ticket promedio) y soporte a decisiones del equipo.</li>
-            <li>Apoyo en análisis de ventas y elaboración de reportes para priorizar acciones comerciales.</li>
-            <li>Atención al cliente con enfoque en experiencia y resultados.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">KPIs</span>
-            <span class="tag">Retail analytics</span>
-            <span class="tag">Reporting</span>
-            <span class="tag">Customer experience</span>
-          </div>
-        </div>
+<div class="footer">
+© 2026 · Kevin Naveros · GitHub Pages
+</div>
 
-        <div class="item">
-          <h3>Logros (opcional, pero recomendado)</h3>
-          <p class="meta">Aquí puedes poner 2–3 logros con números</p>
-          <ul class="bullets">
-            <li>Ejemplo: “Mejoré la visibilidad del desempeño semanal con un reporte en Excel/Power BI”.</li>
-            <li>Ejemplo: “Reduje tiempo de reporte de X a Y (si aplica)”.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card section" id="proyectos">
-        <h2>Proyectos</h2>
-
-        <div class="item">
-          <h3>Proyecto 1 · (Pon el nombre real)</h3>
-          <p class="meta">Python · Datos ENAHO / macro-finanzas (ajusta según tu proyecto)</p>
-          <ul class="bullets">
-            <li>Qué problema resolviste (1 línea).</li>
-            <li>Qué método usaste (modelo, análisis, dashboard, etc.).</li>
-            <li>Resultado: qué obtuviste (ideal con un número o insight).</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Data cleaning</span>
-            <span class="tag">EDA</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3>Proyecto 2 · (Pon el nombre real)</h3>
-          <p class="meta">Power BI · Dashboard / SQL (si aplica)</p>
-          <ul class="bullets">
-            <li>Qué dashboard hiciste y para qué sirve.</li>
-            <li>Qué indicadores muestra.</li>
-            <li>Qué decisión ayuda a tomar.</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Power BI</span>
-            <span class="tag">SQL</span>
-            <span class="tag">KPIs</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h3>Links (cuando los tengas)</h3>
-          <p class="meta">Reemplaza con tus links reales</p>
-          <ul class="bullets">
-            <li>GitHub repo 1: <span style="color:var(--muted)">link</span></li>
-            <li>GitHub repo 2: <span style="color:var(--muted)">link</span></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <section class="card section" id="habilidades" style="margin-top:18px">
-      <h2>Habilidades</h2>
-      <div class="item" style="padding-top:0">
-        <h3>Herramientas</h3>
-        <div class="tags">
-          <span class="tag">Excel (tablas dinámicas, reportes)</span>
-          <span class="tag">Power BI (dashboards)</span>
-          <span class="tag">SQL (consultas)</span>
-          <span class="tag">Python (análisis / automatización)</span>
-          <span class="tag">Git & GitHub</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <h3>Temas</h3>
-        <div class="tags">
-          <span class="tag">Análisis de ventas</span>
-          <span class="tag">Indicadores (KPIs)</span>
-          <span class="tag">Visualización</span>
-          <span class="tag">Finanzas / macro (en progreso)</span>
-        </div>
-      </div>
-    </section>
-
-    <p class="footer">
-      © <span id="y"></span> Tomy Naveros · Hecho con GitHub Pages
-    </p>
-
-  </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+</div>
 </body>
 </html>
